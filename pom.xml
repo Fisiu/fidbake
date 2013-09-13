@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.ingenieux</groupId>
+	<artifactId>ingenieux-docs</artifactId>
+	<packaging>war</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<build>
+		<finalName>ingenieux-docs</finalName>
+
+		<extensions>
+			<extension>
+				<groupId>org.kuali.maven.wagons</groupId>
+				<artifactId>maven-s3-wagon</artifactId>
+				<version>1.1.20</version>
+			</extension>
+		</extensions>
+
+		<plugins>
+			<plugin>
+				<groupId>br.com.ingenieux</groupId>
+				<artifactId>jbake-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>default-generate</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<!-- web.xml is not mandatory since JavaEE 5 -->
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<!-- <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors> 
+						<warSourceDirectory>WebContent</warSourceDirectory> <webResources> <resource> 
+						<directory>src/main/webapp2</directory> <filtering>true</filtering> </resource> 
+						</webResources> -->
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.kuali.maven.plugins</groupId>
+				<artifactId>wagon-maven-plugin</artifactId>
+				<version>1.0.3</version>
+				<executions>
+					<execution>
+						<id>verify</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>upload</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<fromDir>${project.build.directory}/${project.build.finalName}</fromDir>
+					<includes>*</includes>
+					<url>s3://docs.ingenieux.com.br</url>
+					<serverId>docs.ingenieux.com.br</serverId>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
