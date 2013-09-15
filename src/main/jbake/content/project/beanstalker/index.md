@@ -9,28 +9,6 @@ ingenieux Beanstalker is our set of [Apache Maven](http://maven.apache.org/) plu
   * Manage [AWS Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/) Applications
   * Integrate your build with SimpleDB, S3 and CloudFront
 
-### Huge Thanks Goes To
-
-Gratitude is best served warm. I'd like to say huge thanks for those persons:
-
-  * [Andrei Pozolotin](http://github.com/carrot-garden), for being the very first beanstalker user
-  * [Alexander Bertram from BeDataDriven](http://www.bedatadriven.com/), for actually making me happy to know that beanstalker is used from a Humanitarial Perspective
-  * [Yegor Bugayenko](http://github.com/yegor256) for Friendship, Numismatics, replace-environment, CloudFront, and [even some competition](http://www.jcabi.com/jcabi-beanstalk-maven-plugin/)
-  * [Jon Marston](https://github.com/marstonstudio/) from [EnglishCentral](http://www.englishcentral.com/), for feedback and catching some heisenbugs 
-  * [Someone from Mentorgraphics](http://mentor.com/), for general ideas, chitchat and testing
-  * [Ofir Nachmani](http://www.iamondemand.com) and the folks at [Newvem](http://newvem.com/), for letting me try many wild ideas with beanstalker :)
-  
-Besides that, beanstalker development is powered by OSS Licenses offered by:
-
-  * Jetbrains, for [IntelliJ Idea](http://www.jetbrains.com/idea/)
-  * [JRebel](http://bit.ly/18Wa3HK)
-
-As for tools, we're huge fans of:
-
-  * [Newvem](http://www.newvem.com/), for general advice and AWS Usage Monitoring
-  * [Papertrail](https://papertrailapp.com/?thank=cffa7e), for Being Awesome on my Log Collecting
-  * [CopperEgg](http://copperegg.com/copperegg-signup/pro/?utm_source=00QC000001A3DHFMA3), ditto, but for Server Metrics
-
 ### Getting Started
 
 In order to effectively use beanstalker, you need to have a basic understanding of [Apache Maven](http://maven.apache.org/) and [AWS Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/).
@@ -50,8 +28,8 @@ Here are the basic beanstalker usage instructions:
 
 Once you've gotten the essentials, you can:
 
-  * [Manage Environment Configuration](environment-configuration.html)
-  * [Using AWS Elastic Beanstalk Configuration Files](environment-configuration-files.html)
+  * Manage Environment Configuration
+  * Using AWS Elastic Beanstalk Configuration Files
 
 #### Advanced
 
@@ -77,3 +55,26 @@ See the [troubleshooting page](troubleshooting.html) and [Frequently Asked Quest
 ### Support Beanstalker
 
 beanstalker was created to solve my problems. If you find it useful, see the [Donate to beanstalker](http://beanstalker.ingenieux.com.br/donate.html)
+
+### Huge Thanks Goes To
+
+Gratitude is best served warm. I'd like to say huge thanks for those persons:
+
+  * [Andrei Pozolotin](http://github.com/carrot-garden), for being the very first beanstalker user
+  * [Alexander Bertram from BeDataDriven](http://www.bedatadriven.com/), for actually making me happy to know that beanstalker is used from a Humanitarial Perspective
+  * [Yegor Bugayenko](http://github.com/yegor256) for Friendship, Numismatics, replace-environment, CloudFront, and [even some competition](http://www.jcabi.com/jcabi-beanstalk-maven-plugin/)
+  * [Jon Marston](https://github.com/marstonstudio/) from [EnglishCentral](http://www.englishcentral.com/), for feedback and catching some heisenbugs 
+  * [Someone from Mentorgraphics](http://mentor.com/), for general ideas, chitchat and testing
+  * [Ofir Nachmani](http://www.iamondemand.com) and the folks at [Newvem](http://newvem.com/), for letting me try many wild ideas with beanstalker :)
+  
+Besides that, beanstalker development is powered by OSS Licenses offered by:
+
+  * Jetbrains, for [IntelliJ Idea](http://www.jetbrains.com/idea/)
+  * [JRebel](http://bit.ly/18Wa3HK)
+
+As for tools, we're huge fans of:
+
+  * [Newvem](http://www.newvem.com/), for general advice and AWS Usage Monitoring
+  * [Papertrail](https://papertrailapp.com/?thank=cffa7e), for Being Awesome on my Log Collecting
+  * [CopperEgg](http://copperegg.com/copperegg-signup/pro/?utm_source=00QC000001A3DHFMA3), ditto, but for Server Metrics
+
