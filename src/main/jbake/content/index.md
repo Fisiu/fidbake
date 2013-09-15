@@ -1,0 +1,9 @@
+title=Welcome to the ingenieux Docs Hub!
+date=2013-02-27
+type=page
+status=published
+~~~~~~
+
+Here are some pointers:
+
+  * [beanstalker](project/beanstalker/): Our Knowledge Base for Beanstalker

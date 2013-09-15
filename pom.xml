@@ -58,7 +58,8 @@
 				</executions>
 				<configuration>
 					<fromDir>${project.build.directory}/${project.build.finalName}</fromDir>
-					<includes>*</includes>
+					<includes>**/*</includes>
+					<excludes>**/*.jsp,**/web.xml</excludes>
 					<url>s3://docs.ingenieux.com.br</url>
 					<serverId>docs.ingenieux.com.br</serverId>
 				</configuration>

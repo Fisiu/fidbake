@@ -2,10 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Jonathan Bullock</title>
+    <title>
+      ingenieux Labs
+      <#if (content.title)??>
+        - ${content.title}
+      </#if>
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Jonathan Bullock">
+    <meta name="author" content="Aldrin Leal">
 
     <!-- Le styles -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -70,7 +75,7 @@
           <li><a href="/projects.html">Projects</a></li>
           <li><a href="/feed.xml">Subscribe</a></li>
         </ul>
-        <h3 class="muted">Jonathan Bullock</h3>
+        <h3 class="muted">ingenieux docs</h3>
       </div>
 
       <hr>
