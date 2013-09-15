@@ -19,22 +19,23 @@ Here are the basic beanstalker usage instructions:
 
   * [Configuring your AWS Credentials](aws-config.html)
   * [Configuring your pom](pom-config.html) or [Using the Archetype](using-the-archetype.html)
-  * Deploying your Application, [using s3](deploying-using-s3.html) or [using git](using-git.html)
-  * [Updating your Environments](environment-update.html)
+  * Deploying your Application, [using git](using-git.html) or [using s3](deploying-using-s3.html)
+  * [Managing Versions](managing-versions.html)
+  * [Managing Environments](managing-environments.html)
+  * [Other Services Features (EC2 and Route53)](other-services.html)
 
 ### Intermediary Level
 
 Once you've gotten the essentials, you can:
 
-  * [Decide on a CI Strategy](strategy.html)
-  * [Manage Environment Configuration](configuration.html)
-  * [Use Environment Awarenes](environment-awareness.html)
+  * [Manage Environment Configuration](environment-configuration.html)
+  * [Use Environment Awareness](environment-awareness.html)
 
 ### Advanced
 
-  * [Use Zero-Downtime Deployments](zero-downtime-deployments.html)
-  * [CloudFront](using-cloudfront.html)
-  * [SimpleDB](using-simpledb.html)
+  * Zero Downtime Deployments
+  * Using CloudFront
+  * Using SimpleDB
 
 ## Reference
 
@@ -44,6 +45,7 @@ Use these as reference URLs:
   * [Source Code Repository](http://bitbucket.org/aldrinleal/beanstalker)
     * [GitHub Mirror](http://github.com/ingenieux/beanstalker)
   * [Issue Tracking is Kept on Github](http://github.com/ingenieux/beanstalker/issues)
+  * [Plugin Information (Maven Generated)](http://beanstalker.ingenieux.com.br/beanstalk-maven-plugin/plugin-info.html)
 
 ## Troubleshooting beanstalker
 

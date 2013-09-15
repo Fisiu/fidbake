@@ -90,6 +90,6 @@ A basic pom might look as such:
 
 For a full reference, see the [beanstalk plugin property reference](ref-beanstalk-properties.html)
   
-## Extend by Profiles
+## Enclose Deployment Steps via Build Profiles
 
-TBD
+We strongly advise you to package beanstalk-deployment functionality into a build profile. For a full example, see the [Deploying using S3](deploying-using-s3.html) article.
