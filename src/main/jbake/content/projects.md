@@ -8,7 +8,7 @@ status=published
 
 Here are our current OSS offerings:
 
-  * [beanstalker](http://beanstalker.ingenieux.com.br/): The #1 choice for Maven Deployment into AWS Elastic Beanstalk. See our [docs hub](../project/beanstalker/)
+  * [beanstalker](project/beanstalker): The #1 choice for Maven Deployment into AWS Elastic Beanstalk.
   * [cedarhero](http://cedarhero.ingenieux.com.br): An opinionated, no-BS approach for Deployment on Heroku
   * [cloudy](http://bitbucket.org/ingenieux/cloudy): A Set of Guice-based Modules for AWS usage
   * [jbake-maven-plugin](http://bitbucket.org/ingenieux/jbake-maven-plugin): Maven-Driven Flat File CMS using JBake
