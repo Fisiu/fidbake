@@ -1,15 +1,16 @@
 title=Basic POM Configuration
-date=2013-02-27
+date=2013-09-15
 type=page
 status=published
 disqus=true
 ~~~~~~
+[ back to top ](index.html)
 
-## Identify the Version
+### Identify the Version
 
 The version used when writing the docs was 1.1.1, but make sure its the latest version by looking on [search.maven.org](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22br.com.ingenieux%22%20AND%20a%3A%22beanstalk-maven-plugin%22)
 
-## Add the Plugin
+### Add the Plugin
 
 Start by Adding the Plugin in your pom.xml:
 
@@ -19,7 +20,7 @@ Start by Adding the Plugin in your pom.xml:
         <version>[plugin version]</version>
     </plugin>
 
-## Declare the properties
+### Declare the properties
 
 While the beanstalk plugin's mojos allow embedding its config into the ```<configuration/>``` section, we recommend you use it by properties and profiles, since it allows more flexibility and finer control (like overriding from the Command Line):
 
@@ -90,6 +91,12 @@ A basic pom might look as such:
 
 For a full reference, see the [beanstalk plugin property reference](ref-beanstalk-properties.html)
   
-## Enclose Deployment Steps via Build Profiles
+### Enclose Deployment Steps via Build Profiles
 
 We strongly advise you to package beanstalk-deployment functionality into a build profile. For a full example, see the [Deploying using S3](deploying-using-s3.html) article.
+
+### Up Next
+
+How to [deploy using git](deploying-using-s3.html) (**preferred even if you don't use git as your SCM**) and/or [using s3](deploying-using-s3.html)
+
+[ back to top ](index.html)

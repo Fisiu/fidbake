@@ -9,35 +9,57 @@ ingenieux Beanstalker is our set of [Apache Maven](http://maven.apache.org/) plu
   * Manage [AWS Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/) Applications
   * Integrate your build with SimpleDB, S3 and CloudFront
 
-## Getting Started
+### Huge Thanks Goes To
 
-In order to effectively use beanstalker, you need to have a basic understanding of Apache Maven and AWS Elastic Beanstalk.
+Gratitude is best served warm. I'd like to say huge thanks for those persons:
 
-### Basic Level
+  * [Andrei Pozolotin](http://github.com/carrot-garden), for being the very first beanstalker user
+  * [Alexander Bertram from BeDataDriven](http://www.bedatadriven.com/), for actually making me happy to know that beanstalker is used from a Humanitarial Perspective
+  * [Yegor Bugayenko](http://github.com/yegor256) for Friendship, Numismatics, replace-environment, CloudFront, and [even some competition](http://www.jcabi.com/jcabi-beanstalk-maven-plugin/)
+  * [Jon Marston](https://github.com/marstonstudio/) from [EnglishCentral](http://www.englishcentral.com/), for feedback and catching some heisenbugs 
+  * [Someone from Mentorgraphics](http://mentor.com/), for general ideas, chitchat and testing
+  * [Ofir Nachmani](http://www.iamondemand.com) and the folks at [Newvem](http://newvem.com/), for letting me try many wild ideas with beanstalker :)
+  
+Besides that, beanstalker development is powered by OSS Licenses offered by:
+
+  * Jetbrains, for [IntelliJ Idea](http://www.jetbrains.com/idea/)
+  * [JRebel](http://bit.ly/18Wa3HK)
+
+As for tools, we're huge fans of:
+
+  * [Newvem](http://www.newvem.com/), for general advice and AWS Usage Monitoring
+  * [Papertrail](https://papertrailapp.com/?thank=cffa7e), for Being Awesome on my Log Collecting
+  * [CopperEgg](http://copperegg.com/copperegg-signup/pro/?utm_source=00QC000001A3DHFMA3), ditto, but for Server Metrics
+
+### Getting Started
+
+In order to effectively use beanstalker, you need to have a basic understanding of [Apache Maven](http://maven.apache.org/) and [AWS Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/).
+
+#### Basic Usage
 
 Here are the basic beanstalker usage instructions:
 
   * [Configuring your AWS Credentials](aws-config.html)
   * [Configuring your pom](pom-config.html) or [Using the Archetype](using-the-archetype.html)
-  * Deploying your Application, [using git](using-git.html) or [using s3](deploying-using-s3.html)
+  * Deploying your Application, [using git](deploying-using-git.html) or [using s3](deploying-using-s3.html)
   * [Managing Versions](managing-versions.html)
   * [Managing Environments](managing-environments.html)
   * [Other Services Features (EC2 and Route53)](other-services.html)
 
-### Intermediary Level
+#### Intermediary Level
 
 Once you've gotten the essentials, you can:
 
   * [Manage Environment Configuration](environment-configuration.html)
-  * [Use Environment Awareness](environment-awareness.html)
+  * [Using AWS Elastic Beanstalk Configuration Files](environment-configuration-files.html)
 
-### Advanced
+#### Advanced
 
   * Zero Downtime Deployments
   * Using CloudFront
   * Using SimpleDB
 
-## Reference
+### Reference
 
 Use these as reference URLs:
 
@@ -46,7 +68,12 @@ Use these as reference URLs:
     * [GitHub Mirror](http://github.com/ingenieux/beanstalker)
   * [Issue Tracking is Kept on Github](http://github.com/ingenieux/beanstalker/issues)
   * [Plugin Information (Maven Generated)](http://beanstalker.ingenieux.com.br/beanstalk-maven-plugin/plugin-info.html)
+  * [AWS Elastic Beanstalk Developer Guide](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html)
 
-## Troubleshooting beanstalker
+### Troubleshooting beanstalker
 
-See the [troubleshooting page](troubleshooting.html)
+See the [troubleshooting page](troubleshooting.html) and [Frequently Asked Questions](faq.html)
+
+### Support Beanstalker
+
+beanstalker was created to solve my problems. If you find it useful, see the [Donate to beanstalker](http://beanstalker.ingenieux.com.br/donate.html)

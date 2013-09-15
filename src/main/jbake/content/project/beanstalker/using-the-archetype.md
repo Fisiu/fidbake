@@ -1,9 +1,10 @@
 title=Using the Archetype
-date=2013-02-27
+date=2013-09-15
 type=page
 status=published
 disqus=true
 ~~~~~~
+[ back to top ](index.html)
 
 beanstalker contains a very complete Maven Archetype for a Webapp with the following specs:
 
@@ -21,5 +22,8 @@ It couldn't be simpler:
 
 See the generated README.md for details.
 
+### Up Next
 
+See how to [Manage Versions](manage-versions.html)
 
+[ back to top ](index.html)

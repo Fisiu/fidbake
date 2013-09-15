@@ -1,16 +1,17 @@
 title=AWS Configuration
-date=2013-02-27
+date=2013-09-15
 type=page
 status=published
 disqus=true
 ~~~~~~
+[ back to top ](index.html)
 
 In order to use AWS Elastic Beanstalk, you need a set of AWS Credentials. They are a pair of Strings, named:
 
   * AWS Access Key Id: A 20-length all-uppercase and numbers string, like ```022QF06E7MXBSH9DHM02```
   * AWS Secret Key: a 40-length String with alpha, numbers, slash and plus, like ```kWcrlUX5JEDGM/LtmEENI/aVmYvHNif5zB+d9+ct```
 
-## Setting Up Credentials
+### Setting Up Credentials
 
 First, review the [Maven Docs on Password Encryption](http://maven.apache.org/guides/mini/guide-encryption.html) and create your ```settings-security.xml``` and ```settings.xml``` accordingly
 
@@ -34,11 +35,11 @@ Next, create a server entry with your key and encrypted password:
       </servers>
     </settings>
 
-## Having Multiple Servers Defined
+### Having Multiple Servers Defined
 
 If you have multiple servers defined, just add them with names other than ```aws.amazon.com``` and set the Maven Property ```beanstalker.serverId``` to the server name declared.
 
-## Testing the Credentials
+### Testing the Credentials
 
 A Simple test to validate the IAM Credentials is to use the [show-security-credentials mojo](http://beanstalker.ingenieux.com.br/beanstalk-maven-plugin/show-security-credentials-mojo.html). You'll need the ```iam:GetUser``` permission in order to perform this:
 
@@ -56,3 +57,8 @@ A Simple test to validate the IAM Credentials is to use the [show-security-crede
     [INFO] ------------------------------------------------------------------------
     $ 
 
+### Up Next
+
+How to configure [the pom and its settings](pom-config.html). Or, if you're starting from scratch, take a look [at the archetype](using-the-archetype.html)
+
+[ back to top ](index.html)

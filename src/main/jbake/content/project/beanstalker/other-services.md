@@ -1,11 +1,12 @@
 title=Other Services
-date=2013-02-27
+date=2013-09-15
 type=page
 status=published
 disqus=true
 ~~~~~~
+[ back to top ](index.html)
 
-## EC2
+### EC2
 
 The [dump-instances](http://beanstalker.ingenieux.com.br/beanstalk-maven-plugin/dump-instances.html) mojo will dump the current EC2 instances and their IP Addresses:
 
@@ -29,7 +30,7 @@ The [dump-instances](http://beanstalker.ingenieux.com.br/beanstalk-maven-plugin/
     [INFO] ------------------------------------------------------------------------
     $ 
 
-## Route 53
+### Route 53
 
 The [beanstalk:bind-domains](http://beanstalker.ingenieux.com.br/beanstalk-maven-plugin/bind-domains-mojo.html) will bind the current Elastic Load Balancer as an alias. In the example below, Route 53 Zone Id Z3DJ4DL0DIEEJA (for modafocas.org) will be assigned as services.modafocas.org:
     
@@ -38,3 +39,9 @@ The [beanstalk:bind-domains](http://beanstalker.ingenieux.com.br/beanstalk-maven
 It is also possible to bind the root domain into it:
 
     $ mvn beanstalk:bind-domains -Dbeanstalk.domains=modafocas.org
+    
+### Up Next
+
+See [common troubleshooting steps](troubleshooting.html)
+
+[ back to top ](index.html)

@@ -1,9 +1,10 @@
 title=Managing Versions
-date=2013-02-27
+date=2013-09-15
 type=page
 status=published
 disqus=true
 ~~~~~~
+[ back to top ](index.html)
 
 ### Rolling Back a Version
 
@@ -86,3 +87,8 @@ In order to actually delete the version, supply dryRun as false:
     [INFO] Final Memory: 5M/15M
     [INFO] ------------------------------------------------------------------------
 
+### Up Next
+
+See [how to manage environments](managing-environments.html)
+
+[ back to top ](index.html)

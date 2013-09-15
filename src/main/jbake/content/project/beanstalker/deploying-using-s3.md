@@ -1,9 +1,10 @@
 title=Deploying using S3
-date=2013-02-27
+date=2013-09-15
 type=page
 status=published
 disqus=true
 ~~~~~~
+[ back to top ](index.html)
 
 S3-based deployment is more flexible than git, but requires more configuration
 
@@ -42,7 +43,6 @@ Here's a basic pom.xml of a project supporting S3 deployments:
             <beanstalk.applicationName>mywebapp</beanstalk.applicationName>
             <beanstalk.cnamePrefix>mywebapp</beanstalk.cnamePrefix>
             <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
-            <beanstalk.versionLabel>${maven.build.timestamp}</beanstalk.versionLabel>
             <beanstalk.s3Bucket>ingenieux-beanstalk-apps</beanstalk.s3Bucket>
             <beanstalk.s3Key>${project.artifactId}/${project.build.finalName}-${maven.build.timestamp}.war</beanstalk.s3Key>
             <beanstalk.multipartUpload>false</beanstalk.multipartUpload>
@@ -65,6 +65,9 @@ Here's a basic pom.xml of a project supporting S3 deployments:
                           <goal>create-application-version</goal>
                           <goal>update-environment</goal>
                         </goals>
+                        <configuration>
+                          <beanstalk.versionLabel>${maven.build.timestamp}</beanstalk.versionLabel>
+                        </configuration>
                       </execution>
                     </executions>
                 </plugin>
@@ -140,7 +143,7 @@ Here's what happens:
     [INFO] ... as well as having domain beanstalk-mywebapp.elasticbeanstalk.com
     [INFO] Environment Detail:com.amazonaws.services.elasticbeanstalk.model.EnvironmentDescription@608ba297[environmentName=mywebapp,environmentId=e-c4zhpqjk9r,applicationName=mywebapp,versionLabel=git-3c532af59ab1bd353eb754b1b4daaf8331980cfe-1379262401575,solutionStackName=32bit Amazon Linux running Tomcat 7,templateName=<null>,description=beanstalker-basic Maven Webapp,endpointURL=awseb-e-c-AWSEBLoa-MU7JKWGXRU6W-652123616.us-east-1.elb.amazonaws.com,cNAME=beanstalk-mywebapp.elasticbeanstalk.com,dateCreated=Sun Sep 15 13:29:05 BRT 2013,dateUpdated=Sun Sep 15 14:15:18 BRT 2013,status=Ready,health=Green,resources=<null>]
     [INFO] SUCCESS
-    [INFO]  * versionLabel: git-3c532af59ab1bd353eb754b1b4daaf8331980cfe-1379262401575 [class: String]
+    [INFO]  * versionLabel: 20130915141635 [class: String]
     [INFO]  * status: Updating [class: String]
     [INFO]  * applicationName: mywebapp [class: String]
     [INFO]  * endpointURL: awseb-e-c-AWSEBLoa-MU7JKWGXRU6W-652123616.us-east-1.elb.amazonaws.com [class: String]
@@ -160,7 +163,7 @@ Here's what happens:
     [INFO] Final Memory: 17M/164M
     [INFO] ------------------------------------------------------------------------
 
-## About the Profile
+### About the Profile
 
 It is quite important for the profile to pack the needed mojos and goals. It does so by defining the profile, the defaultGoal (deploy), and the mojos to be called from the plugin:
 
@@ -168,7 +171,7 @@ It is quite important for the profile to pack the needed mojos and goals. It doe
   * [create-application-version](http://http://beanstalker.ingenieux.com.br/beanstalk-maven-plugin/create-application-version-mojo.html) (which tells Elastic Beanstalk to create this version)
   * [update-environment](http://beanstalker.ingenieux.com.br/beanstalk-maven-plugin/update-environment-mojo.html) (which tells elastic beanstalk that this recently-created version should be set)
 
-## Analyzing the properties
+### Analyzing the properties
 
     <properties>
       <maven.install.skip>true</maven.install.skip>
@@ -180,7 +183,7 @@ It is quite important for the profile to pack the needed mojos and goals. It doe
       <beanstalk.s3Bucket>ingenieux-beanstalk-apps</beanstalk.s3Bucket>
       <beanstalk.s3Key>${project.artifactId}/${project.build.finalName}-${maven.build.timestamp}.war</beanstalk.s3Key>
       <beanstalk.multipartUpload>false</beanstalk.multipartUpload>
-      <beanstalk.useLatestVersion>false</beanstalk.useLatestVersion>
+      <beanstalk.useLatestVersionLabel>false</beanstalk.useLatestVersionLabel>
     </properties>
 
 The first two are to avoid deploying on your Maven Repository as well as installing locally.
@@ -191,4 +194,10 @@ Properties ```beanstalk.s3Bucket``` and ```beanstalk.s3Key``` declare where uplo
 
 Property ```beanstalk.cnamePrefix``` will figure out on which environment to deploy, and it will fail if the environment is not available. If you want selective behaviour (creating an environment if it doesn't exist, or updating an existing if it does), use the [put-environment mojo](http://beanstalker.ingenieux.com.br/beanstalk-maven-plugin/put-environment-mojo.html) instead.
 
-Currently, the 1.1.1 version mojo for update-environment and upload-source-bundle are broken when it comes to the defaults, so the last two versions are needed to fix this
+Currently, the 1.1.1 version mojos for update-environment and upload-source-bundle are broken when it comes to the defaults, so the last two versions are needed to fix this
+
+### Up Next
+
+See how to [Manage Versions](manage-versions.html)
+
+[ back to top ](index.html)
