@@ -1,9 +1,5 @@
-.settings
-.idea
 target
-.classpath
-.project
-syntax:glob
-*.log
-syntax:glob
-*.iml
+\.settings
+\.classpath
+\.project
+\.komodoproject$
