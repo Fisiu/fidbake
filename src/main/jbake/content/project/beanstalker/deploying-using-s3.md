@@ -179,7 +179,6 @@ It is quite important for the profile to pack the needed mojos and goals. It doe
       <beanstalk.applicationName>mywebapp</beanstalk.applicationName>
       <beanstalk.cnamePrefix>mywebapp</beanstalk.cnamePrefix>
       <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
-      <beanstalk.versionLabel>${maven.build.timestamp}</beanstalk.versionLabel>
       <beanstalk.s3Bucket>ingenieux-beanstalk-apps</beanstalk.s3Bucket>
       <beanstalk.s3Key>${project.artifactId}/${project.build.finalName}-${maven.build.timestamp}.war</beanstalk.s3Key>
       <beanstalk.multipartUpload>false</beanstalk.multipartUpload>

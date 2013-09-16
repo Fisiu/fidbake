@@ -2,6 +2,7 @@ title=ingenieux Beanstalker Docs Hub
 date=2013-09-15
 type=page
 status=published
+disqus=true
 ~~~~~~
 
 ingenieux Beanstalker is our set of [Apache Maven](http://maven.apache.org/) plugins for [Amazon Web Services](http://aws.amazon.com) (AWS), which lets you effectively use Maven to:
