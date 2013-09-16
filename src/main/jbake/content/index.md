@@ -6,4 +6,5 @@ status=published
 
 Here are some pointers:
 
-  * [beanstalker](project/beanstalker/): Our Knowledge Base for Beanstalker
+  * [beanstalker](project/beanstalker/): Our Knowledge Base for beanstalker
+  * [cedarhero](project/cedarhero/): Our Knowledge Base for cedarhero
