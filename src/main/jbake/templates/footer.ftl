@@ -12,6 +12,12 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        hljs.tabReplace = '  '; //4 spaces
+        hljs.initHighlighting();
+      });
+    </script>
     
     <#if (content)?? && (content.disqus)??>
       <!-- disqus stuff -->    
