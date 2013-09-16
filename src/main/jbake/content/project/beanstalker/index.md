@@ -55,17 +55,17 @@ See the [troubleshooting page](troubleshooting.html) and [Frequently Asked Quest
 
 ### Support Beanstalker
 
-beanstalker was created to solve my problems. If you find it useful, see the [Donate to beanstalker](http://beanstalker.ingenieux.com.br/donate.html)
+beanstalker was created to solve my problems. If you find it useful, see [Donate to beanstalker](http://beanstalker.ingenieux.com.br/donate.html)
 
 ### Huge Thanks Goes To
 
-Gratitude is best served warm. I'd like to say huge thanks for those persons:
+Gratitude is best served warm. I'd like to say huge thanks to:
 
   * [Andrei Pozolotin](http://github.com/carrot-garden), for being the very first beanstalker user
   * [Alexander Bertram from BeDataDriven](http://www.bedatadriven.com/), for actually making me happy to know that beanstalker is used from a Humanitarial Perspective
   * [Yegor Bugayenko](http://github.com/yegor256) for Friendship, Numismatics, replace-environment, CloudFront, and [even some competition](http://www.jcabi.com/jcabi-beanstalk-maven-plugin/)
   * [Jon Marston](https://github.com/marstonstudio/) from [EnglishCentral](http://www.englishcentral.com/), for feedback and catching some heisenbugs 
-  * [Someone from Mentorgraphics](http://mentor.com/), for general ideas, chitchat and testing
+  * [Keith Childers from Mentorgraphics](http://mentor.com/), for general ideas, chitchat and testing
   * [Ofir Nachmani](http://www.iamondemand.com) and the folks at [Newvem](http://newvem.com/), for letting me try many wild ideas with beanstalker :)
   
 Besides that, beanstalker development is powered by OSS Licenses offered by:
