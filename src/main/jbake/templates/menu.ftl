@@ -21,14 +21,19 @@
         
         <!-- Right navigation -->
         <ul class="nav navbar-nav navbar-right">
+          <#if !config.sidebar_enabled?? || config.sidebar_enabled == "false">
+            <#if config.login_twitter?has_content>
+              <li><a href="http://twitter.com/${config.login_twitter}" title="Twitter"><i class="fa fa-twitter-square"></i></a></li>
+            </#if>
+            <#if config.login_github?has_content>
+              <li><a href="https://github.com/${config.login_github}" title="Github"><i class="fa fa-github-square"></i></a></li>
+            </#if>
+            <#if config.login_google_plus?has_content>
+              <li><a href="https://plus.google.com/${config.login_googleplus}" title="Google+"><i class="fa fa-google-plus-square"></i></a></li>
+            </#if>
+          </#if>
           <li><a href="/archive.html"><i class="fa fa-list"></i> Archive</a></li>
           <li><a href="/${config.feed_file}" title="Rss"><i class="fa fa-rss"></i> </a></li>
-          <#if config.login_twitter?has_content>
-            <li><a href="//twitter.com/${config.login_twitter}" title="Twitter"><i class="fa fa-twitter-square"></i></a></li>
-          </#if>
-          <#if config.login_github?has_content>
-            <li><a href="//github.com/${config.login_github}" title="Github"><i class="fa fa-github-square"></i></a></li>
-          </#if>
         </ul>
         <!-- Right navigation end -->
 

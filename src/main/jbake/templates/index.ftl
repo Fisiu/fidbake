@@ -21,7 +21,7 @@
                     <#assign limit = config.post_summary_length?number>
                     <#assign max=post.body?length>
                     <#if (limit < max)>
-                      <#assign max = limit>              
+                      <#assign max = limit>
                     </#if>
                     <#assign short = post.body?substring(0, max)>
                     <h2><a href="${post.uri}">${post.title}</a></h2>
