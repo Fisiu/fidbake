@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>docs.ingenieux.com.br</title>
+    <title>la Manzana</title>
     <link>http://docs.ingenieux.com.br/</link>
     <atom:link href="http://docs.ingenieux.com.br/feed.xml" rel="self" type="application/rss+xml" />
     <description>ingenieux Labs Docs</description>
-    <language>en</language>
+    <language>pl</language>
     <pubDate>${published_date?string("EEE, d MMM yyyy HH:mm:ss Z")}</pubDate>
     <lastBuildDate>${published_date?string("EEE, d MMM yyyy HH:mm:ss Z")}</lastBuildDate>
 

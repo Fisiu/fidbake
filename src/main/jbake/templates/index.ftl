@@ -1,24 +1,33 @@
 <#include "header.ftl">
+<#include "menu.ftl">
 
-      <!--<div class="jumbotron">
+      <div class="jumbotron">
         <h1>Bake your own site!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p class="lead">This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <a class="btn btn-large btn-success" href="#">Sign up today</a>
       </div>
-
-	<hr>-->
-
-	<div class="row-fluid marketing">
-		<div class="span12">
-			<#list posts as post>
-			<h4><a href="${post.uri}">${post.title}</a></h4>
-			<p>${post.date?string("dd MMMM yyyy")} - ${post.body?substring(0, 150)}...</p>
-			<#if post_index = 2><#break></#if>
-			</#list>
-			<a href="/archive.html">Archive</a>
-		</div>
-	</div>
-
-	<hr>
+      <hr>
+      <div class="row-fluid marketing">
+        <div class="span12">
+          <#list posts as post>
+            <#if post.status == "published">
+              <#assign limit = config.post_summary_length?number>
+              <#assign max=post.body?length>
+              <#if (limit < max)>
+                <#assign max = limit>              
+              </#if>
+              <#assign short = post.body?substring(0, max)>
+              <h4><a href="${post.uri}">${post.title}</a></h4>
+              <#assign date = post.date?string("dd MMMM yyyy")>
+              <p>${date}</p>
+              <p>${short}</p>
+              <#if post_index = 2>
+              <#break>
+              </#if>
+            </#if>
+          </#list>
+        </div>
+      </div>
+      <hr>
 
 <#include "footer.ftl">
