@@ -78,5 +78,3 @@
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <!-- Wrap all page content here -->
-    <div id="wrap">
