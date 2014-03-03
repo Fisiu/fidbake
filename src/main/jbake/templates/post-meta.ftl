@@ -3,5 +3,7 @@
             <#if config.meta_author?has_content>
             <i class="fa fa-user"></i>&nbsp;${config.meta_author}&nbsp;&nbsp;
             </#if>
-            <i class="fa fa-comment"></i>&nbsp;Counter
+            <#if config.disqus_enabled?? && config.disqus_enabled == "true">
+              <i class="fa fa-comment"></i>&nbsp;<a href="${url}#disqus_thread">${config.disqus_no_comments}</a>
+            </#if>
           </p>

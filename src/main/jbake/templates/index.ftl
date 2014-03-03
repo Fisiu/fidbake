@@ -29,7 +29,7 @@
                     </#if>
                     <h2><a href="${post.uri}">${post.title}</a></h2>
                     <#assign date = post.date>
-                    <#assign url = post.uri + "#disqus_thread">
+                    <#assign url = post.uri>
                     <#include "post-meta.ftl">
                     <p>${short}</p>
                     <#if need_more>
