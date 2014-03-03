@@ -22,6 +22,9 @@ footer {
 }
 /*-------------------------------*/
 
+
+/* Site custom styles
+ * ------------------------------*/
 .gotop {
   display: block;
   text-align: right;
@@ -43,3 +46,37 @@ footer {
   margin: 20px 0px 10px;
 }
 
+
+/*-------------------------------*/
+
+
+/* Social share with counters
+ * ------------------------------*/
+
+/* This gets Google to fall into place */
+.social {
+  font-size: 1px;
+}
+
+/* This gets Facebook to fall into place */
+.social iframe {
+  vertical-align: middle;
+}
+
+/* Set an optional width for your button wrappers */
+.social span {
+  display: inline-block;
+}
+
+/* Adjust the widths individually if you like */
+.social .facebook iframe {
+  border: none;
+  overflow: hidden;
+  height: 21px;
+  width: 120px;
+}
+
+.social .google {
+  width: 80px;
+}
+/*-------------------------------*/
