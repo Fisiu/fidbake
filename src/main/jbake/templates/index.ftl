@@ -18,19 +18,26 @@
               <div class="span12">
                 <#list posts as post>
                   <#if post.status == "published">
-                    <#assign limit = config.post_summary_length?number>
-                    <#assign max=post.body?length>
-                    <#if (limit < max)>
-                      <#assign max = limit>
+                    <#assign marker = config.post_summary_marker>
+                    <#assign max = post.body?index_of(marker)>
+                    <#if max == -1>
+                      <#assign short = post.body?string>
+                      <#assign need_more = false>
+                    <#else>
+                      <#assign short = post.body?substring(0, max)>
+                      <#assign need_more = true>
                     </#if>
-                    <#assign short = post.body?substring(0, max)>
                     <h2><a href="${post.uri}">${post.title}</a></h2>
                     <#assign date = post.date>
+                    <#assign url = post.uri + "#disqus_thread">
                     <#include "post-meta.ftl">
                     <p>${short}</p>
-                    <#if post_index = 2>
-                    <#break>
+                    <#if need_more>
+                      <a href="${post.uri}" class="btn btn-info btn-sm read-more">
+                        ${config.tr_read_more} <i class="fa fa-arrow-right"></i>
+                      </a>
                     </#if>
+                    <br>
                   </#if>
                 </#list>
               </div>

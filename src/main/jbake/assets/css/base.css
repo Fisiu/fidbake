@@ -46,6 +46,12 @@ footer {
   margin: 20px 0px 10px;
 }
 
+.read-more {
+	float: right;
+	font-size: 12px;
+	text-decoration: none;
+}
+
 
 /*-------------------------------*/
 
