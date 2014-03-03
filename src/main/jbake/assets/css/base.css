@@ -10,7 +10,7 @@ html {
 body {
   font-family: 'Noto Sans', sans-serif;
   margin: 0 0 75px; /* bottom = footer height */
-  margin-top: 75px;
+  margin-top: 60px;
 }
 
 footer {
@@ -32,6 +32,11 @@ footer {
 }
 
 .sidebar-list-item {
+  padding-left: 40px;
+}
+
+.social-icon {
+  vertical-align: middle;
 }
 
 .share {
