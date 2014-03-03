@@ -3,69 +3,21 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.fisiu</groupId>
 	<artifactId>blog</artifactId>
-	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<build>
 		<finalName>blog</finalName>
 
-		<extensions>
-			<extension>
-				<groupId>org.kuali.maven.wagons</groupId>
-				<artifactId>maven-s3-wagon</artifactId>
-				<version>1.1.20</version>
-			</extension>
-		</extensions>
-
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.4</version>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
 				<configuration>
-					<!-- web.xml is not mandatory since JavaEE 5 -->
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-					<!--
-                    <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
-					<warSourceDirectory>WebContent</warSourceDirectory>
-                    <webResources>
-                            <resource>
-                                <directory>src/main/webapp2</directory>
-                                <filtering>true</filtering>
-                            </resource>
-                    </webResources>
-                    -->
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.kuali.maven.plugins</groupId>
-				<artifactId>wagon-maven-plugin</artifactId>
-				<version>1.0.3</version>
-				<executions>
-					<execution>
-						<id>verify</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>upload</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<fromDir>${project.build.directory}/${project.build.finalName}</fromDir>
-					<includes>**/*</includes>
-					<excludes>**/*.jsp,**/web.xml</excludes>
-					<url>s3://docs.ingenieux.com.br</url>
-					<serverId>docs.ingenieux.com.br</serverId>
-				</configuration>
-			</plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
-                </configuration>
-            </plugin>
+
 			<plugin>
 				<groupId>br.com.ingenieux</groupId>
 				<artifactId>jbake-maven-plugin</artifactId>
@@ -80,6 +32,59 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<!-- Commit and push site to github pages, by default to gh-pages branch -->
+			<!-- https://github.com/github/maven-plugins -->
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.9</version>
+				<configuration>
+					<message>${commit.message}</message>
+					<!-- <message>Creating site for ${project.version}</message> -->
+					<outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>
+					<!-- Provide repo name to upload, $(user,project).github.io -->
+					<repositoryName>fisiu.github.io</repositoryName>
+					<!-- Provide repo owner -->
+					<repositoryOwner>Fisiu</repositoryOwner>
+					<!-- If user repo used, set branch to master -->
+					<branch>refs/heads/master</branch>
+					<dryRun>false</dryRun>
+					<excludes>
+						<exclude>**/*.jsp</exclude>
+						<exclude>**/web.xml</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>site</phase>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Run mvn exec:exec to generate site and upload it with single step -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<configuration>
+					<executable>mvn</executable>
+					<arguments>
+						<argument>clean:clean</argument>
+						<argument>jbake:generate</argument>
+						<argument>site:site</argument>
+						<argument>clean:clean</argument>
+					</arguments>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+
+	<properties>
+		<github.global.server>github</github.global.server>
+		<commit.message>Site update</commit.message>
+	</properties>
 </project>
