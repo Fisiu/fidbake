@@ -22,6 +22,11 @@ footer {
 }
 /*-------------------------------*/
 
+.gotop {
+  display: block;
+  text-align: right;
+}
+
 .sidebar-list {
   font-size: 14px;
 }

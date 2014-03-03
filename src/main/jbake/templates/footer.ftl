@@ -4,10 +4,10 @@
       <div class="container">
         <hr>
         <div class="row">
-          <div class="col-xs-11">
+          <div class="col-xs-10">
             <p class="text-muted credit">&copy; ${config.site_copyright} 2014 | Mixed with <a href="http://getbootstrap.com/">Bootstrap v3.1.1</a> | Baked with <a href="http://jbake.org">JBake ${version}</a> | <i title="Linux" class="fa fa-linux"></i></p>
           </div>
-          <div class="col-xs-1">
+          <div class="col-xs-2 gotop">
             <a href="#"><i class="fa fa-arrow-circle-up"> top</i></a>
           </div>
         </div>
