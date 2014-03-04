@@ -25,7 +25,7 @@
             <#include "post-meta.ftl">
               <p>${short}</p>
             <#if need_more>
-              <a href="${post.uri}" class="btn btn-info btn-sm read-more">${config.tr_read_more} <i class="fa fa-arrow-right"></i></a>
+              <a href="${post.uri}" class="btn btn-success btn-sm read-more">${config.tr_read_more} <i class="fa fa-arrow-right"></i></a>
             </#if>
               <br>
             </article>
