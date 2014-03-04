@@ -71,7 +71,7 @@
               }
             });
           } else {
-            $('#repoview').append('<p>${noRepoMsg}</p>');
+            $('#repoview').append('<p>' + noRepoMsg + '</p>');
           }
         });
       });
