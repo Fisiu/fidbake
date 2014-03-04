@@ -38,6 +38,11 @@ footer {
   padding-left: 40px;
 }
 
+.static-box > .panel-body {
+  padding: 10px;
+  text-align: center;
+}
+
 .social-icon {
   vertical-align: middle;
 }
@@ -93,3 +98,4 @@ footer {
   width: 80px;
 }
 /*-------------------------------*/
+
