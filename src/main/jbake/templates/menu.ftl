@@ -32,7 +32,9 @@
               <li><a href="https://plus.google.com/${config.login_googleplus}" title="Google+"><i class="fa fa-google-plus-square"></i></a></li>
             </#if>
           </#if>
-          <li><a href="/archive.html"><i class="fa fa-list"></i> Archive</a></li>
+          <#if config.render_archive?? && config.render_archive == "true">
+          <li><a href="/${config.archive_file}"><i class="fa fa-list"></i> ${config.tr_archive}</a></li>
+          </#if>
           <li><a href="/${config.feed_file}" title="Rss"><i class="fa fa-rss"></i> </a></li>
         </ul>
         <!-- Right navigation end -->
