@@ -24,8 +24,13 @@
       <!-- load prettify only when needed -->
       $(document).ready(function(){
         var prettify = false;
+        <#if config.prettify_linenums?? && config.prettify_linenums == "true">
+        var classToAdd = 'prettyprint snippet linenums';
+        <#else>
+        var classToAdd = 'prettyprint snippet';
+        </#if>
         $("pre > code").each(function() {
-          $("pre > code").parent().addClass('prettyprint snippet');
+          $("pre > code").parent().addClass(classToAdd);
           prettify = true;
         });
         if(prettify) {
