@@ -64,9 +64,41 @@
 <#else>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </#if>
+<#if config.prettify_enabled?? && config.prettify_enabled == "true">
+    <#switch config.prettify_theme>
+      <#case "github">
+    <link rel="stylesheet" href="/css/prettify-themes/github.css">
+        <#break>
+      <#case "hemisu-dark">
+    <link rel="stylesheet" href="/css/prettify-themes/hemisu-dark.css">
+        <#break>
+      <#case "hemisu-light">
+    <link rel="stylesheet" href="/css/prettify-themes/hemisu-light.css">
+        <#break>
+      <#case "tomorrow-night-blue">
+    <link rel="stylesheet" href="/css/prettify-themes/tomorrow-night-blue.css">
+        <#break>
+      <#case "tomorrow-night-bright">
+    <link rel="stylesheet" href="/css/prettify-themes/tomorrow-night-bright.css">
+        <#break>
+      <#case "tomorrow-night-eighties">
+    <link rel="stylesheet" href="/css/prettify-themes/tomorrow-night-eighties.css">
+        <#break>
+      <#case "tomorrow-night">
+    <link rel="stylesheet" href="/css/prettify-themes/tomorrow-night.css">
+        <#break>
+      <#case "tomorrow">
+    <link rel="stylesheet" href="/css/prettify-themes/tomorrow.css">
+        <#break>
+      <#case "vibrant-ink">
+    <link rel="stylesheet" href="/css/prettify-themes/vibrant-ink.css">
+        <#break>
+      <#default>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.css">
+        <#break>
+    </#switch>
+</#if>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-<!--    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css"> -->
-<!--    <link rel="stylesheet" href="//jmblog.github.io/color-themes-for-google-code-prettify/css/themes/github.css">-->
     <link rel="stylesheet" href="/css/base.css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->

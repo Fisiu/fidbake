@@ -17,33 +17,37 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>-->
-    <#if config.disqus_enabled?? && config.disqus_enabled == "true">
-     <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = '${config.disqus_username}'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+    
+    <#if config.prettify_enabled?? && config.prettify_enabled == "true">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+    <script type="text/javascript">
+      <!-- load prettify only when needed -->
+      $(document).ready(function(){
+        var prettify = false;
+        $("pre > code").each(function() {
+          $("pre > code").parent().addClass('prettyprint snippet');
+          prettify = true;
+        });
+        if(prettify) {
+          prettyPrint();
+        }
+      });
     </script>
     </#if>
-     <script type="text/javascript">
-          $(document).ready(function(){
-            var prettify = false;
-            $("code").parent().each(function() {
-              $(this).addClass('prettyprint Lang-');
-              prettify = true;
-            });
-            if(prettify) {
-              prettyPrint();
-            }
-          });
+
+    <#if config.disqus_enabled?? && config.disqus_enabled == "true">
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = '${config.disqus_username}'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
     </script>
+    </#if>
   </body>
 </html>

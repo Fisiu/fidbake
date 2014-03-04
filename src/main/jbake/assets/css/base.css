@@ -52,10 +52,8 @@ footer {
   text-decoration: none;
 }
 
-pre.prettyprint {
-  border: 1px solid #ccc;
-  margin-bottom: 0;
-  padding: 9.5px;
+/* You can override pre > code styles */
+.snippet {
 }
 
 /*-------------------------------*/
