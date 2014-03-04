@@ -3,7 +3,7 @@
           <section>
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-users fa-lg"> Social</i></h3>
+                <i class="fa fa-users fa-lg panel-title"> Social</i>
               </div>
               <div class="list-group sidebar-list">
                 <#if config.sidebar_github?has_content && config.sidebar_github == "true">
@@ -29,7 +29,7 @@
             <#if config.sidebar_staticbox?? && config.sidebar_staticbox == "true">
             <div class="panel panel-primary static-box">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><i class="fa fa-info-circle fa-lg"> ${config.sidebar_staticbox_title}</i></h3>
+                    <i class="fa fa-info-circle fa-lg panel-title"> ${config.sidebar_staticbox_title}</i>
                 </div>
                 <div class="panel-body">
                     <#if config.sidebar_staticbox_content?has_content>
@@ -38,6 +38,17 @@
                         <#assign static_content = '<a href="http://en.opensuse.org/Portal:13.1"><img src="http://countdown.opensuse.org/small.png" border="0"/></a>'>
                     </#if>
                     <p>${static_content}</p>
+                </div>
+            </div>
+            </#if>
+            <#if config.sidebar_github_repoview?? && config.sidebar_github_repoview == "true">
+            <div class="panel panel-primary github-repoview">
+                <div class="panel-heading">
+                    <i class="fa fa-github fa-lg panel-title"> ${config.sidebar_github_repoview_title}</i>
+                </div>
+                <div class="panel-body">
+                    <div id="repoview">
+                    </div>
                 </div>
             </div>
             </#if>
