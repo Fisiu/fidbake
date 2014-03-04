@@ -55,7 +55,7 @@
     </script>
     </#if>
 
-    <#if config.sidebar_github_repoview?? && config.sidebar_github_repoview == "true">
+    <#if config.sidebar_github_repoview?? && config.sidebar_github_repoview == "true" && sidebar??>
     <script type="text/javascript">
       var username = '${config.login_github}';
       var repoLimit = ${config.sidebar_github_repoview_limit};

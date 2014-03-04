@@ -1,4 +1,5 @@
       <div id="sidebar" class="col-md-3">
+      <#assign sidebar = true>
         <aside>
           <section>
             <div class="panel panel-primary">
