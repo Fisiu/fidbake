@@ -4,6 +4,6 @@
             <i class="fa fa-user"></i>&nbsp;${config.meta_author}&nbsp;&nbsp;
             </#if>
             <#if config.disqus_enabled?? && config.disqus_enabled == "true">
-              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://${config.site_host}${url}#disqus_thread" data-disqus-identifier="${url}"></a></span>
+              <i class="fa fa-comment"></i>&nbsp;<span class="badge"><a href="http://${config.site_host}${url}#disqus_thread"></a></span>
             </#if>
           </p>
