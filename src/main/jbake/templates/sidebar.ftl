@@ -46,9 +46,7 @@
                 <div class="panel-heading">
                     <i class="fa fa-github fa-lg panel-title"> ${config.sidebar_github_repoview_title}</i>
                 </div>
-                <div class="panel-body">
-                    <div id="repoview">
-                    </div>
+                <div id="repoview" class="panel-body">
                 </div>
             </div>
             </#if>

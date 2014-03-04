@@ -43,6 +43,11 @@ footer {
   text-align: center;
 }
 
+#repoview {
+  font-size: 12px;
+  padding: 5px;
+}
+
 .social-icon {
   vertical-align: middle;
 }
