@@ -35,7 +35,7 @@
                     <#if config.sidebar_staticbox_content?has_content>
                         <#assign static_content = config.sidebar_staticbox_content>
                     <#else>
-                        <#assign static_content = '<a href="http://en.opensuse.org/Portal:13.1"><img src="http://countdown.opensuse.org/small.png" border="0"/></a>'>
+                        <#assign static_content = '<a href="http://en.opensuse.org/Portal:13.1"><img src="http://countdown.opensuse.org/small.png" alt="openSUSE Counter"/></a>'>
                     </#if>
                     <p>${static_content}</p>
                 </div>
