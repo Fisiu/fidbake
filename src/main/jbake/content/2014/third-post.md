@@ -8,7 +8,7 @@ status=published
 Title
 =====
 
-Hello world in `java`:
+Hello <kbd>world</kbd> in `java`:
 
 ```java
 public class HelloWorld {
@@ -21,7 +21,7 @@ public class HelloWorld {
 
 And for `python`:
 
-```python
+```
 print("Hello, World!")
 ```
 

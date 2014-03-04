@@ -17,8 +17,8 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+    <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!--    <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>-->
     <#if config.disqus_enabled?? && config.disqus_enabled == "true">
      <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -33,5 +33,17 @@
     }());
     </script>
     </#if>
+     <script type="text/javascript">
+          $(document).ready(function(){
+            var prettify = false;
+            $("code").parent().each(function() {
+              $(this).addClass('prettyprint Lang-');
+              prettify = true;
+            });
+            if(prettify) {
+              prettyPrint();
+            }
+          });
+    </script>
   </body>
 </html>

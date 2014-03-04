@@ -47,11 +47,16 @@ footer {
 }
 
 .read-more {
-	float: right;
-	font-size: 12px;
-	text-decoration: none;
+  float: right;
+  font-size: 12px;
+  text-decoration: none;
 }
 
+pre.prettyprint {
+  border: 1px solid #ccc;
+  margin-bottom: 0;
+  padding: 9.5px;
+}
 
 /*-------------------------------*/
 
