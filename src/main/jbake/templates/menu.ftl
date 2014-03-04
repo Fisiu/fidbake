@@ -35,7 +35,7 @@
           <#if config.render_archive?? && config.render_archive == "true">
           <li><a href="/${config.archive_file}"><i class="fa fa-list"></i> ${config.tr_archive}</a></li>
           </#if>
-          <li><a href="/${config.feed_file}" title="Rss"><i class="fa fa-rss"></i> </a></li>
+          <li><a href="/${config.feed_file}" title="Rss"><i class="fa fa-rss"></i> ${config.tr_feed}</a></li>
         </ul>
         <!-- Right navigation end -->
 
