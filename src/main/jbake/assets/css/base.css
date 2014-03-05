@@ -62,6 +62,11 @@ footer {
   text-decoration: none;
 }
 
+.tagsbar {
+  text-transform: lowercase !important;
+  font-size: 11px;
+}
+
 /* You can override pre > code styles */
 .snippet {
 }
