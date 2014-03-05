@@ -55,30 +55,30 @@
     </script>
     </#if>
 
-    <#if config.sidebar_github_repoview?? && config.sidebar_github_repoview == "true" && sidebar??>
-    <script type="text/javascript">
-      var username = '${config.login_github}';
-      var repoLimit = ${config.sidebar_github_repoview_limit};
-      var noRepoMsg = '${config.sidebar_github_repoview_norepomsg}';
-      $(function() {
-        $.getJSON('https://api.github.com/users/' + username + '/repos?callback=?', function(resp) {
-          if (resp.data.length > 0) {
-            $('#repoview').append('<ul></ul>');
-            $.each($(resp.data).sort(sortByPushDate), function(i, val) {
-              $('#repoview > ul').append('<li><a href="'+val['html_url']+'">'+val['name']+'</a><p>'+((val['description']) ? val['description'] : '(No description.)')+'</p></li>');
-              if(i == repoLimit) {
-                  return false;
+    <#if config.sidebar_github_repoview?? && config.sidebar_github_repoview == "true">
+      <#if sidebar_visible??><!-- call api only when sidebar is visible -->
+        <script type="text/javascript">
+          console.log('SIDEBAR');
+          var username = '${config.login_github}';
+          var repoLimit = ${config.sidebar_github_repoview_limit};
+          var noRepoMsg = '${config.sidebar_github_repoview_norepomsg}';
+          $(function() {
+            $.getJSON('https://api.github.com/users/' + username + '/repos?callback=?', {sort: 'pushed'}, function(resp) {
+              if (resp.data.length > 0) {
+                $('#repoview').append('<ul></ul>');
+                $.each($(resp.data), function(i, val) {
+                  $('#repoview > ul').append('<li><a href="'+val['html_url']+'">'+val['name']+'</a><p>'+((val['description']) ? val['description'] : '(No description.)')+'</p></li>');
+                  if(i == repoLimit) {
+                      return false;
+                  }
+                });
+              } else {
+                $('#repoview').append('<p>' + noRepoMsg + '</p>');
               }
             });
-          } else {
-            $('#repoview').append('<p>' + noRepoMsg + '</p>');
-          }
-        });
-      });
-      function sortByPushDate(x, y) {
-          return x.pushed_at < y.pushed_at;
-      }
-    </script>
+          });
+        </script>
+      </#if>
     </#if>
   </body>
 </html>
