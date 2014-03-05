@@ -11,7 +11,7 @@
             <article>
 			  <h2>Tag: ${tag?trim?lower_case?replace(" ", "-")}</h2>
 			  <hr>
-              <#list tag_posts as post>
+              <#list tag_posts?sort_by("date")?reverse as post>
 			    <#if (last_month)??>
 				  <#if post.date?string("MMMM yyyy") != last_month>
               </ul>
@@ -19,7 +19,7 @@
               <ul>
 				  </#if>
 				<#else>
-              <h3 class="well well-sm">${post.date?string("MMMM yyyy")}</h3>
+              <h4 class="well well-sm tag-month">${post.date?string("MMMM yyyy")}</h4>
               <ul>
                 </#if>
 			    <#assign last_month = post.date?string("MMMM yyyy")>
