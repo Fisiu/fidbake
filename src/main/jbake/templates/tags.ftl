@@ -1,23 +1,41 @@
 <#include "header.ftl">
+<#include "menu.ftl">
 
-	<div class="row-fluid marketing">
-		<div class="span12">
-			<h2>Tags</h2>
-			<#list posts as post>
-				<#if (last_month)??>
-					<#if post.date?string("MMMM yyyy") != last_month>
-						<h3>${post.date?string("MMMM yyyy")}</h3>
-					</#if>
+	    <div class="row">
+        <#if config.sidebar_enabled?? && config.sidebar_enabled == "true">
+          <div class="col-md-9">
+        <#else>
+          <div class="col-md-12">
+        </#if>
+
+            <article>
+			  <h2>Tag: ${tag?trim?lower_case?replace(" ", "-")}</h2>
+			  <hr>
+              <#list tag_posts as post>
+			    <#if (last_month)??>
+				  <#if post.date?string("MMMM yyyy") != last_month>
+              </ul>
+			  <h4 class="well well-sm tag-month">${post.date?string("MMMM yyyy")}</h4>
+              <ul>
+				  </#if>
 				<#else>
-					<h3>${post.date?string("MMMM yyyy")}</h3>
-				</#if> 
-				
-				<h4>${post.date?string("dd MMMM")} - <a href="${post.uri}">${post.title}</a></h4>
-				<#assign last_month = post.date?string("MMMM yyyy")>
-			</#list>
-		</div>
-	</div>
+              <h3 class="well well-sm">${post.date?string("MMMM yyyy")}</h3>
+              <ul>
+                </#if>
+			    <#assign last_month = post.date?string("MMMM yyyy")>
+                <li>
+                  <p>${post.date?string("dd")} - <a href="${post.uri}">${post.title}</a></p>
+                </li>
+			  </#list>
+              </ul>
+		    </article>
 
-	<hr>
+	      </div> <!-- /.col-md -->
+          <#if config.sidebar_enabled?? && config.sidebar_enabled == "true">
+            <#include "sidebar.ftl">
+          </#if>
+        </div> <!-- /.row -->
+
 
 <#include "footer.ftl">
+
