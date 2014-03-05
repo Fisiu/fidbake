@@ -32,7 +32,7 @@
             <#assign date = post.date>
             <#assign url = post.uri>
             <#include "post-meta.ftl">
-              <p>${short}</p>
+              ${short}
             <#if need_more>
               <a href="${post.uri}" class="btn btn-success btn-sm read-more">${config.tr_read_more} <i class="fa fa-arrow-right"></i></a>
             </#if>
