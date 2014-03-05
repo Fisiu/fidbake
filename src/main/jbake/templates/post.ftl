@@ -6,9 +6,10 @@
           <article>
             <div class="page-header"><h1>${content.title}</h1>
             <#if content.tags??>
-              <ol class="breadcrumb">
-              <#list content.tags as tag>
-                <li><a href="#">${tag}</a></li>
+              <ol class="breadcrumb tagsbar">
+              <#list content.tags as rawtag>
+                <#assign tag = rawtag?trim?lower_case?replace(" ", "-")>
+                <li><a href="/tags/${tag}.html">${tag}</a></li>
               </#list>
               </ol>
             </#if>
