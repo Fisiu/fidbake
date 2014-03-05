@@ -9,7 +9,7 @@
         </#if>
 
             <article>
-			  <h2>Tag: ${tag?trim?lower_case?replace(" ", "-")}</h2>
+			  <h2>Tag# ${tag?trim?replace(" ", "-")}</h2>
 			  <hr>
               <#list tag_posts?sort_by("date")?reverse as post>
 			    <#if (last_month)??>
