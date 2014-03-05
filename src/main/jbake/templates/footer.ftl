@@ -68,7 +68,7 @@
                 $('#repoview').append('<ul></ul>');
                 $.each($(resp.data), function(i, val) {
                   $('#repoview > ul').append('<li><a href="'+val['html_url']+'">'+val['name']+'</a><p>'+((val['description']) ? val['description'] : '(No description.)')+'</p></li>');
-                  if(i == repoLimit) {
+                  if(i == repoLimit -1) {
                       return false;
                   }
                 });
