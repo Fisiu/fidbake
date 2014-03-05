@@ -58,7 +58,6 @@
     <#if config.sidebar_github_repoview?? && config.sidebar_github_repoview == "true">
       <#if sidebar_visible??><!-- call api only when sidebar is visible -->
         <script type="text/javascript">
-          console.log('SIDEBAR');
           var username = '${config.login_github}';
           var repoLimit = ${config.sidebar_github_repoview_limit};
           var noRepoMsg = '${config.sidebar_github_repoview_norepomsg}';
