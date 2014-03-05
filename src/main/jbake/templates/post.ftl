@@ -4,7 +4,15 @@
       <div class="row">
         <div class="col-md-12">
           <article>
-            <div class="page-header"><h1>${content.title}</h1></div>
+            <div class="page-header"><h1>${content.title}</h1>
+            <#if content.tags??>
+              <ol class="breadcrumb">
+              <#list content.tags as tag>
+                <li><a href="#">${tag}</a></li>
+              </#list>
+              </ol>
+            </#if>
+            </div>
               <#assign date = content.date>
               <#if config.disqus_enabled?? && config.disqus_enabled == "true">
                 <#assign url = content.uri>
