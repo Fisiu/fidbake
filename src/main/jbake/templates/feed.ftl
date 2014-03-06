@@ -6,20 +6,20 @@
     <atom:link href="http://${config.site_host}/feed.xml" rel="self" type="application/rss+xml" />
     <description>${config.site_subtitle}</description>
     <language>en</language>
-    <pubDate>${published_date?string("EEE, d MMM yyyy HH:mm:ss Z")}</pubDate>
-    <lastBuildDate>${published_date?string("EEE, d MMM yyyy HH:mm:ss Z")}</lastBuildDate>
+    <#assign pub_date = published_date?datetime?string.medium>
+    <pubDate>${pub_date}</pubDate>
+    <lastBuildDate>${pub_date}</lastBuildDate>
 
-    <#list posts as post>
+    <#list published_posts as post>
       <item>
-        <title>${post.title}</title>
+        <title><#escape x as x?xml>${post.title}</#escape></title>
+        <author>${config.meta_author}</author>
         <link>http://${config.site_host}${post.uri}</link>
-        <pubDate>${post.date?string("EEE, d MMM yyyy HH:mm:ss Z")}</pubDate>
+        <pubDate>${post.date?datetime?string.medium}</pubDate>
         <guid isPermaLink="false">${post.uri}</guid>
         <description>
-          <#escape x as x?xml>
-	        ${post.body}
-	      </#escape>
-	    </description>
+          <#escape x as x?xml>${post.body}</#escape>
+        </description>
       </item>
     </#list>
   </channel> 
