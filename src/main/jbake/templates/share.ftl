@@ -1,5 +1,5 @@
       <div class="share">
-<#assign post_url = config.site_host + content.uri>
+<#assign post_url = "http://" + config.site_host + content.uri>
 <#if config.share_counters?? && config.share_counters == "true">
         <div class="social">
   <#if config.share_facebook?? && config.share_facebook == "true">
@@ -26,16 +26,16 @@
 <#else>
   <!-- Facebook -->
   <#if config.share_facebook?? && config.share_facebook == "true">
-          <a href="http://www.facebook.com/sharer.php?u=${config.site_host}${content.uri}" target="_blank"><img src="/img/sharebuttons/facebook.png" alt="Facebook" /></a>
+          <a href="http://www.facebook.com/sharer.php?u=${post_url}" target="_blank"><img src="/img/sharebuttons/facebook.png" alt="Facebook" /></a>
   </#if>
   <!-- Google+ -->
   <#if config.share_googleplus?? && config.share_googleplus == "true">
-          <a href="https://plus.google.com/share?url=${config.site_host}${content.uri}" target="_blank"><img src="/img/sharebuttons/google_plus.png" alt="Google" /></a>
+          <a href="https://plus.google.com/share?url=${post_url}" target="_blank"><img src="/img/sharebuttons/google_plus.png" alt="Google" /></a>
   </#if>
   <!-- Twitter -->
   <#if config.share_twitter?? && config.share_twitter == "true">
           <#assign url = config.site_host+content.uri>
-          <a href="http://twitter.com/share?url=${config.site_host}${content.uri}&text=${content.title} ${url}" target="_blank"><img src="/img/sharebuttons/twitter.png" alt="Twitter" /></a>
+          <a href="http://twitter.com/share?url=${post_url}&text=${content.title} ${url}" target="_blank"><img src="/img/sharebuttons/twitter.png" alt="Twitter" /></a>
   </#if>
 </#if>
       </div>
