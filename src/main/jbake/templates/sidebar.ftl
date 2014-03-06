@@ -3,7 +3,7 @@
           <section>
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <i class="fa fa-users fa-lg panel-title"> Social</i>
+                <i class="fa fa-users fa-lg panel-title"> ${config.sidebar_social_title}</i>
               </div>
               <div class="list-group sidebar-list">
                 <#if config.sidebar_github?has_content && config.sidebar_github == "true">
