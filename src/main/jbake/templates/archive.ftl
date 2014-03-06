@@ -19,7 +19,7 @@
               <ul>
                   </#if>
                 <#else>
-              <h3 class="well well-sm">${post.date?string("MMMM yyyy")}</h3>
+              <h3 class="well well-sm archive-month">${post.date?string("MMMM yyyy")}</h3>
               <ul>
                 </#if>
                 <#assign last_month = post.date?string("MMMM yyyy")>
