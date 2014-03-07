@@ -5,7 +5,7 @@
   <#if config.share_facebook?? && config.share_facebook == "true">
   <!-- Facebook -->
           <span class="facebook">
-            <iframe src="//www.facebook.com/plugins/like.php?href=http://${post_url}&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=${config.share_facebook_appid}" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <iframe src="//www.facebook.com/plugins/like.php?href=${post_url}&layout=button_count&action=like&show_faces=false&share=false&height=21&appId=${config.share_facebook_appid}" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </span>
   </#if>
   <!-- Google+ -->
