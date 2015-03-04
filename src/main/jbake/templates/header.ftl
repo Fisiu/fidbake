@@ -16,53 +16,53 @@
 <#if config.site_theme?has_content>
   <#switch config.site_theme>
     <#case "amelia">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/amelia/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/amelia/bootstrap.min.css">
       <#break>
     <#case "cerulean">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/cerulean/bootstrap.min.css">
       <#break>
     <#case "cosmo">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/cosmo/bootstrap.min.css">
       <#break>
     <#case "cyborg">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/cyborg/bootstrap.min.css">
       <#break>
     <#case "flatly">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/flatly/bootstrap.min.css">
       <#break>
     <#case "journal">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/journal/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/journal/bootstrap.min.css">
       <#break>
     <#case "lumen">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/lumen/bootstrap.min.css">
       <#break>
     <#case "readable">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/readable/bootstrap.min.css">
       <#break>
     <#case "simplex">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/simplex/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/simplex/bootstrap.min.css">
       <#break>
     <#case "slate">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/slate/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/slate/bootstrap.min.css">
       <#break>
     <#case "spacelab">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/spacelab/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/spacelab/bootstrap.min.css">
       <#break>
     <#case "superhero">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/superhero/bootstrap.min.css">
       <#break>
     <#case "united">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/united/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/united/bootstrap.min.css">
       <#break>
     <#case "yeti">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.2/yeti/bootstrap.min.css">
       <#break>
     <#default>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
       <#break>
   </#switch>
 <#else>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 </#if>
 <#if config.prettify_enabled?? && config.prettify_enabled == "true">
     <#switch config.prettify_theme>
@@ -98,7 +98,7 @@
         <#break>
     </#switch>
 </#if>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css">
     <link rel="stylesheet" href="/css/base.css">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
