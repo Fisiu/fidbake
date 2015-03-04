@@ -4,7 +4,7 @@
   <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = '${config.disqus_username}'; // required: replace example with your forum shortname
-  
+
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

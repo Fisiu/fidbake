@@ -1,4 +1,4 @@
-      
+
     <nav class="navbar navbar-default navbar-fixed-top <#if config.site_nav_inverse=="true">navbar-inverse</#if>" role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -11,14 +11,14 @@
           </button>
           <a class="navbar-brand" href="/">${config.site_title}</a>
         </div>
-        
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><a href="/pages/about.html">About me</a></li>
             <li><a href="/pages/contact.html">Contact</a></li>
           </ul>
-        
+
         <!-- Right navigation -->
         <ul class="nav navbar-nav navbar-right">
           <#if !config.sidebar_enabled?? || config.sidebar_enabled == "false">

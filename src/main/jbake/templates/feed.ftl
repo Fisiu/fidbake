@@ -22,5 +22,5 @@
         </description>
       </item>
     </#list>
-  </channel> 
+  </channel>
 </rss>

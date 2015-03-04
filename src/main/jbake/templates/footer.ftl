@@ -20,7 +20,7 @@
     <#if config.site_embed_gists?? && config.site_embed_gists == "true">
     <script src="//cdnjs.cloudflare.com/ajax/libs/gist-embed/1.6/gist-embed.min.js"></script>
     </#if>
-    
+
     <#if config.prettify_enabled?? && config.prettify_enabled == "true">
     <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
     <script type="text/javascript">

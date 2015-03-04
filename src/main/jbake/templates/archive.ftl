@@ -29,7 +29,7 @@
               </#list>
               </ul>
             </article>
-        
+
           </div><!-- /.col-md -->
           <#if config.sidebar_enabled?? && config.sidebar_enabled == "true">
             <#include "sidebar.ftl">
